@@ -29,7 +29,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-
 p {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -43,6 +42,40 @@ a {
   transition: border 0.2s ease-in-out;
 }
 
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+  left: -5rem;
+  position: fixed;
+  top: 0;
+  width: 105%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  
+}
+
+.navbar a {
+  color: #f8d64e;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  width: 30%;
+  display: flex;
+  justify-content: center; /* Centraliza o texto (e a linha) */
+  padding-bottom: 2px; /* Espaço para a borda */
+}
+
+.navbar a:hover {
+  color: white;
+}
+
 a:hover {
   border-bottom: 2px solid #ffffff;
 }
@@ -53,67 +86,54 @@ strong {
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
+
 .container {
   transform: rotate(1deg);
   position: relative;
   background-color: #000;
   color: #fff;
   padding: 1.5rem;
-  margin: 2rem 0;
-  border: 5px solid #f8d64e; /* amarelo P5 */
+  margin: 14rem 0 2rem; 
+  border: 5px solid #f8d64e;
   border-radius: 2px;
   font-family: 'Segoe UI', sans-serif;
   box-shadow: 1rem 1rem 0 #f8d64e;
-
   width: 90%;
   font-size: 1.05rem;
   line-height: 1.6;
 }
-.container p{
-  transform: rotate(-1deg);
-}
-.container-label {
-  transform: rotate(-1deg);
-  position: relative;
-  line-height: 0rem;
-  width: 12rem;
-  left: -1.4rem;
-  top: 1.5rem;
-  background-color: #000000;
-  font-weight: bold;
-  padding: 0rem 0.6rem;   
-  box-shadow: 2px 2px 0 #000;
+
+.container::before {
+  content: "Introdução";
+  position: absolute;
+  top: -5.6rem;
+  left: -2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #f8d64e;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #000;
+  padding: 0.5rem 1.5rem;
   border: 4px solid #f8d64e;
   border-radius: 2px;
+  z-index: 10;
 }
 
-.contato-label {
-  left: -26rem;
-  line-height: 0rem;
+.container p {
   transform: rotate(-1deg);
-  position: relative;
-  background-color: #000000;
-  font-weight: bold;
-  padding: 0rem 0.6rem;
-  box-shadow: 2px 2px 0 #000;
-  border: 4px solid #f8d64e;
-  border-radius: 2px;
-  width: 140px;
-  margin: 0 auto;
-  top: 1.7rem;
-}
-.contato-label h2 {
-  transform: rotate(1deg);
-  margin-left: 8px;
 }
 
+/* Container de contato com pseudo-elemento */
 .contato-info {
   transform: rotate(1deg);
+
   position: relative;
   background-color: #000;
   color: #fff;
   padding: 1.5rem;
-  margin: 2rem auto;
+  margin: 12rem auto 2rem; /* Mais espaço no topo para o rótulo */
   border: 5px solid #f8d64e;
   border-radius: 2px;
   font-family: 'Segoe UI', sans-serif;
@@ -123,6 +143,28 @@ strong {
   font-size: 1.05rem;
   line-height: 1.6;
 }
+
+/* Rótulo para contato */
+.contato-info::before {
+  content: "Contato";
+  position: absolute;
+  top: -4.6rem;
+  left: -2rem;
+  transform: rotate(0deg);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #f8d64e;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #000;
+  padding: 0rem 2rem;
+  border: 4px solid #f8d64e;
+  border-radius: 2px;
+
+  z-index: 10;
+}
+
 .contato-info p {
   transform: rotate(-1deg);
   margin: 1rem 0;
@@ -139,15 +181,19 @@ strong {
   border-bottom: 1px solid #fff;
 }
 
+.container:hover, .contato-info:hover {
+  box-shadow: 1rem 1rem rgba(248, 214, 78);
+  transform: rotate(1deg) scale(1.01);
+}
 
 .botao-container {
   margin-top: 6rem;
   display: flex;
-  justify-content: space-between; /* Faz os botões se afastarem */
-  gap: 0; /* Pode até tirar o gap, pq o espaço fica com space-between */
+  justify-content: space-between;
+  gap: 0;
   margin-bottom: 3rem;
-  flex-wrap: nowrap; /* Força a ficar em uma linha */
-  width: 100%; /* Ocupa toda a largura possível */; /* Pode ajustar conforme quiser */
+  flex-wrap: nowrap;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -164,10 +210,9 @@ strong {
   text-decoration: none;
   box-shadow: 4px 4px 0 #000;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  width: 30%; /* Faz cada botão ocupar cerca de 1/3 da linha */
-  text-align: center; /* Centraliza texto dentro do botão */
-  box-sizing: border-box; /* Pra incluir bordas e padding no width */
+  width: 30%;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .botao:hover {
@@ -177,49 +222,146 @@ strong {
   color: #000;
 }
 
-@media (max-width:1000px) 
-{
+.section-divider {
+  height: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f8d64e,
+    #f8d64e 10px,
+    #000 10px,
+    #000 20px
+  );
+}
+
+@media (max-width:1000px) {
+    .navbar {
+    left: -5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 2rem 4rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
+  }
+
+  .navbar a {
+    color: #f8d64e;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    transition: color 0.3s ease;
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+    padding-bottom: 2px; 
+  }
+  h1 {
+    margin-top: 8rem;
+  }
   h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size:4rem;
-  color: #f8d64e;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:4rem;
+    color: #f8d64e;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Ajustes para rótulos em telas menores */
+  .container::before,
+  .contato-info::before {
+    font-size: 3.5rem;
+    padding: 0.5rem 1.2rem;
+    top: -7.2rem;
+    left: -1rem;
+  }
 }
 
-.container-label {
-  transform: rotate(-1deg);
-  position: relative;
-  line-height: 0rem;
-  width: 18rem;
-  left: -1.4rem;
-  top: 1.7rem;
-  background-color: #000000;
-  font-weight: bold;
-  padding: 0rem 0.6rem;   
-  box-shadow: 2px 2px 0 #000;
-  border: 4px solid #f8d64e;
-  border-radius: 2px;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+    margin-top: 8rem;
+  }
+  
+  .navbar {
+    left: -5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 2rem 4rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
+  }
+
+  .navbar a {
+    color: #f8d64e;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    transition: color 0.3s ease;
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+    padding-bottom: 2px; 
+  }
+  
+  .botao {
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .botao-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Ajustes para rótulos em tablets */
+  .container::before,
+  .contato-info::before {
+    font-size: 2.8rem;
+    padding: 0.4rem 1rem;
+    top: -6.0rem;
+    left: -0.8rem;
+  }
 }
 
-.contato-label {
-  left: -22.3rem;
-  line-height: 0rem;
-  transform: rotate(-1deg);
-  position: relative;
-  background-color: #000000;
-  font-weight: bold;
-  padding: 0rem 0.6rem;
-  box-shadow: 2px 2px 0 #000;
-  border: 4px solid #f8d64e;
-  border-radius: 2px;
-  width: 200px;
-  margin: 0 auto;
-  top: 1.7rem;
-}
-.contato-label h2 {
-  transform: rotate(1deg);
-  margin-left: 8px;
-}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .botao {
+    font-size: 2rem;
+  }
+  
+  body {
+    padding: 1rem;
+  }
+  
+  /* Ajustes para rótulos em celulares */
+  .container::before,
+  .contato-info::before {
+    font-size: 2rem;
+    padding: 0.3rem 0.8rem;
+    top: -5.3rem;
+    left: -0.5rem;
+  }
+  
+  .container,
+  .contato-info {
+    margin-top: 5rem;
+  }
 }
