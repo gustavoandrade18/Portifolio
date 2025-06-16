@@ -234,6 +234,10 @@ strong {
 }
 
 @media (max-width:1000px) {
+  .container{
+    margin: 10rem 0 2rem;
+    
+  }
     .navbar {
     left: -5rem;
     position: fixed;
