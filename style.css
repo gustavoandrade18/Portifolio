@@ -92,6 +92,34 @@ strong {
   transform: rotate(1deg);
 }
 
+.contato-info {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #000;
+  border: 3px solid #f8d64e;
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 #f8d64e;
+  font-size: 1.1rem;
+  transform: rotate(1deg);
+}
+
+.contato-info p {
+  margin: 0.5rem 0;
+  transform: rotate(-1deg);
+}
+
+.contato-info a {
+  color: #f8d64e;
+  text-decoration: none;
+  border-bottom: 1px dotted #f8d64e;
+}
+
+.contato-info a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
 .botao-container {
   display: flex;
   justify-content: center;
