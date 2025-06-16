@@ -88,25 +88,45 @@ strong {
   border-radius: 2px;
 }
 
-.container-label h2{
+.contato-label {
+  left: -26rem;
+  line-height: 0rem;
+  transform: rotate(-1deg);
+  position: relative;
+  background-color: #000000;
+  font-weight: bold;
+  padding: 0rem 0.6rem;
+  box-shadow: 2px 2px 0 #000;
+  border: 4px solid #f8d64e;
+  border-radius: 2px;
+  width: 140px;
+  margin: 0 auto;
+  top: 1.7rem;
+}
+.contato-label h2 {
   transform: rotate(1deg);
+  margin-left: 8px;
 }
 
 .contato-info {
-  max-width: 900px;
-  margin: 0 auto 2rem auto;
-  padding: 1rem 1.5rem;
-  background-color: #000;
-  border: 3px solid #f8d64e;
-  border-radius: 4px;
-  box-shadow: 6px 6px 0 #f8d64e;
-  font-size: 1.1rem;
   transform: rotate(1deg);
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border: 5px solid #f8d64e;
+  border-radius: 2px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 1rem 1rem 0 #f8d64e;
+  max-width: 900px;
+  width: 90%;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
-
 .contato-info p {
-  margin: 0.5rem 0;
   transform: rotate(-1deg);
+  margin: 1rem 0;
 }
 
 .contato-info a {
@@ -120,7 +140,9 @@ strong {
   border-bottom: 1px solid #fff;
 }
 
+
 .botao-container {
+  margin-top: 6rem;
   display: flex;
   justify-content: center;
   gap: 6rem;
@@ -175,4 +197,23 @@ strong {
   border-radius: 2px;
 }
 
+.contato-label {
+  left: -22.3rem;
+  line-height: 0rem;
+  transform: rotate(-1deg);
+  position: relative;
+  background-color: #000000;
+  font-weight: bold;
+  padding: 0rem 0.6rem;
+  box-shadow: 2px 2px 0 #000;
+  border: 4px solid #f8d64e;
+  border-radius: 2px;
+  width: 200px;
+  margin: 0 auto;
+  top: 1.7rem;
+}
+.contato-label h2 {
+  transform: rotate(1deg);
+  margin-left: 8px;
+}
 }
