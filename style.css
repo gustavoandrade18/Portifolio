@@ -34,7 +34,6 @@ p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  max-width: 800px;
 }
 
 a {
@@ -65,7 +64,7 @@ strong {
   border-radius: 2px;
   font-family: 'Segoe UI', sans-serif;
   box-shadow: 1rem 1rem 0 #f8d64e;
-  max-width: 900px;
+
   width: 90%;
   font-size: 1.05rem;
   line-height: 1.6;
@@ -79,7 +78,7 @@ strong {
   line-height: 0rem;
   width: 12rem;
   left: -1.4rem;
-  top: 1.7rem;
+  top: 1.5rem;
   background-color: #000000;
   font-weight: bold;
   padding: 0rem 0.6rem;   
