@@ -93,7 +93,7 @@ strong {
   background-color: #000;
   color: #fff;
   padding: 1.5rem;
-  margin: 14rem 0 2rem; 
+  margin: 8rem 0 2rem; 
   border: 5px solid #f8d64e;
   border-radius: 2px;
   font-family: 'Segoe UI', sans-serif;
@@ -133,7 +133,7 @@ strong {
   background-color: #000;
   color: #fff;
   padding: 1.5rem;
-  margin: 12rem auto 2rem; /* Mais espaço no topo para o rótulo */
+  margin: 8rem auto 2rem; /* Mais espaço no topo para o rótulo */
   border: 5px solid #f8d64e;
   border-radius: 2px;
   font-family: 'Segoe UI', sans-serif;
