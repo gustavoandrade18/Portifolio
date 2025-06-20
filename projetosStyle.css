@@ -67,8 +67,13 @@ h1 {
 
 .projeto-card img {
   width: 100%;
-  height: auto;
+  height: 25vw;
   display: block;
+}
+@media (max-width:1000px){
+  .projeto-card img {
+  height: 50vw;
+}
 }
 
 .projeto-detalhes {
@@ -76,6 +81,9 @@ h1 {
   padding: 1rem;
   border-top: 2px solid #f8d64e;
   background-color: #080808;
+}
+.projeto-detalhes a {
+  word-break: break-all;     /* quebra a palavra quando necessário */
 }
 
 .detalhes-texto {
@@ -137,6 +145,33 @@ a:hover {
   border-color: #ff6666;
 }
 
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay que cobre toda a tela */
+.image-overlay {
+  display: none; /* só aparece ao clicar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Imagem centralizada e redimensionada */
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  cursor: zoom-out;
+}
 
 
 
@@ -156,7 +191,15 @@ a:hover {
 
 
 @media (max-width:1000px) {
-
+    body {
+      background-color: #881313; /* vermelho vivo */
+      color: #ffffff; /* texto branco */
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.205) 0.75rem, transparent 1px);
+      background-size: 2.25rem 2.25rem;
+    }
     h1 {
     margin-top: 8rem;
     }
@@ -171,15 +214,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-color: #881313; /* vermelho vivo */
-    color: #ffffff; /* texto branco */
-    font-family: 'Segoe UI', 'Roboto', sans-serif;
-    margin: 0;
-    padding: 2rem;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.205) 0.75rem, transparent 1px);
-    background-size: 2.25rem 2.25rem;
-    }
 
     h1 {
     font-size: 3.5rem;
