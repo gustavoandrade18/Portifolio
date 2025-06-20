@@ -1,0 +1,206 @@
+body {
+  background-color: #881313; /* vermelho vivo */
+  color: #ffffff; /* texto branco */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.205) 0.5rem, transparent 1px);
+  background-size: 1.5rem 1.5rem;
+  
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px black;
+}
+
+.galeria-projetos {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 5fr));
+    align-items: start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.projeto-card {
+
+    max-width: 90%;
+    position: relative;
+    background-color: #000;
+    border: 4px solid #f8d64e;
+    box-shadow: 0.5rem 0.5rem 0 #f8d64e;
+    overflow: visible;
+    padding: 0.4rem;
+    margin: 2rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -3.2rem;
+  left: -2rem; 
+  transform: translateX(0); 
+  background-color: #000;
+  color: #f8d64e;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  padding: 0 0.8rem;
+  border: 4px solid #f8d64e;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+  white-space: nowrap;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0 #f8d64e;
+}
+
+.projeto-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projeto-detalhes {
+  display: none;
+  padding: 1rem;
+  border-top: 2px solid #f8d64e;
+  background-color: #080808;
+}
+
+.detalhes-texto {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #f8d64e; /* amarelo */
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.detalhes-texto:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #f8d64e;
+}
+
+.projeto-detalhes img {
+  margin-top: 1rem;
+  max-width: 100%;
+  border: 2px solid #f8d64e;
+}
+
+.projeto-card.ativo .projeto-detalhes {
+  display: block;
+}
+
+a {
+  color: #f8d64e;
+  text-decoration: none;
+  border-bottom: 1px dotted #f8d64e;
+}
+
+a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.back-button {
+  display: block;              /* permite aplicar margin auto */
+  margin: 2rem auto; 
+  justify-content: center;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #ff4444; /* vermelho vibrante */
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+  border-color: #ff6666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1000px) {
+
+    h1 {
+    margin-top: 8rem;
+    }
+    h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size:4rem;
+        color: #f8d64e;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #881313; /* vermelho vivo */
+    color: #ffffff; /* texto branco */
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.205) 0.75rem, transparent 1px);
+    background-size: 2.25rem 2.25rem;
+    }
+
+    h1 {
+    font-size: 3.5rem;
+    margin-top: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+    }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .botao {
+    font-size: 2rem;
+  }
+  
+  body {
+    padding: 1rem;
+  }
+}
